@@ -1,11 +1,12 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div className="main-nav bg-gray-600 h-[10vh] flex justify-between items-center px-[1.5vw] select-none">
-      <div className="left flex justify-center items-center gap-1">
+    <div className="main-nav bg-transparent h-[10vh] flex justify-between items-center px-[1.5vw] select-none fixed top-0 left-0 right-0 bottom-0 z-50">
+      <div className="left flex justify-center items-center gap-1 ">
         <img className="h-[1vw]" src="/smile.svg" alt="Icon" />
-        <h2 className="Helvetica-robot uppercase text-[0.9vw] text-white">
+        <h2 className="Helvetica-robot uppercase text-[0.9vw] text-white cursor-pointer">
           Contact_Us
         </h2>
       </div>

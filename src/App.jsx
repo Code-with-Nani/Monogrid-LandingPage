@@ -1,12 +1,13 @@
 import "./App.css";
-import Header from "./components/Header";
+
 import Home from "./components/Home";
+import Nani from "./components/Nani";
 
 function App() {
   return (
     <>
-      <Header />
       <Home />
+     <Nani/>
     </>
   );
 }
