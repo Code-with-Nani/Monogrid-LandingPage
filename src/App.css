@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Helvetica-Lt;
+    src: url("./assests/fonts/HelveticaNeueLTPro-Lt.woff2");
+}
+@font-face {
+    font-family: Helvetica-Ro;
+    src: url("./assests/fonts/HelveticaNeueLTPro-Roman.woff2");
+}
+@font-face {
+    font-family: Helvetica-Bd;
+    src: url("./assests/fonts/HelveticaNeueLTPro-Bd.woff2");
+}
+@font-face {
+    font-family: Helvetica-robot;
+    src: url("./assests/fonts/Helvetica2334h.woff2");
+}
+
+.Helvetica-Lt{
+    font-family: Helvetica-Lt,sans-serif;
+}
+.Helvetica-Ro{
+    font-family: Helvetica-Ro,sans-serif;
+}
+.Helvetica-Bd{
+    font-family: Helvetica-Bd,sans-serif;
+}
+.Helvetica-robot{
+    font-family: Helvetica-robot,sans-serif;
+}
