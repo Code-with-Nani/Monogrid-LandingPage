@@ -4,6 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import video from "../assests/images/Home.mp4";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { motion, spring } from "framer-motion"
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -35,7 +36,12 @@ const Header = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="navbar fixed top-0 left-0 right-0 bottom-0 z-50 text-white h-[100vh] ">
+        <motion.div 
+        initial ={{y:-1000}}
+        animate = {{y:0}}
+        transition={{duration:1.3,ease:"easeIn",type:spring }}
+        
+        className="navbar fixed top-0 left-0 right-0 bottom-0 z-50 text-white h-[100vh] ">
           <div className="upper-nav bg-[#0000FF] h-[90%] ">
             <div className="nav flex justify-between items-center lg:px-[30px] px-[10px] select-none h-[60px]">
               <div className="left sm:flex justify-center items-center gap-1 hidden">
@@ -62,7 +68,7 @@ const Header = () => {
                   <img className="h-[15px]" src="/icon.svg" alt="" />
                   Menu
                 </div>
-                <div className="line h-[1px] bg-gray-100 "></div>
+                <motion.div className="line h-[1px] bg-gray-100 "></motion.div>
                 <div className="link list-none Helvetica-Lt text-[33px] lg:text-[50px] leading-[1.3] my-6 lg:my-4">
                   <li className="text-black">Home</li>
                   <li className="hover:text-black">About Us</li>
@@ -110,8 +116,12 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="upper-nav bg-[#111010] h-[10%]"></div>
-        </div>
+          <motion.div
+          initial={{backgroundColor:"blue"}}
+          animate={{backgroundColor:"black"}}
+          transition={{delay:1.3}}
+           className="upper-nav bg-[#111010] h-[10%]"></motion.div>
+        </motion.div>
       )}
     </>
   );

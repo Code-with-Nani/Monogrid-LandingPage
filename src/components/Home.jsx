@@ -3,6 +3,7 @@ import video from "../assests/images/Home.mp4";
 import Header from "./Header";
 import Typewriter from "typewriter-effect";
 
+
 const Home = () => {
   return (
     <div className="relative h-screen overflow-hidden select-none">
