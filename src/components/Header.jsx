@@ -39,7 +39,7 @@ const Header = () => {
         <motion.div 
         initial ={{y:-1000}}
         animate = {{y:0}}
-        transition={{duration:1.3,ease:"easeIn",type:spring }}
+        transition={{duration:1.3,ease:"linear",type:spring }}
         
         className="navbar fixed top-0 left-0 right-0 bottom-0 z-50 text-white h-[100vh] ">
           <div className="upper-nav bg-[#0000FF] h-[90%] ">
@@ -68,12 +68,12 @@ const Header = () => {
                   <img className="h-[15px]" src="/icon.svg" alt="" />
                   Menu
                 </div>
-                <motion.div className="line h-[1px] bg-gray-100 "></motion.div>
+                <motion.div initial={{width:"0"}} whileInView={{width:"100%"}} transition={{duration:1}} className="line h-[1px] bg-gray-100 "></motion.div>
                 <div className="link list-none Helvetica-Lt text-[33px] lg:text-[50px] leading-[1.3] my-6 lg:my-4">
-                  <li className="text-black">Home</li>
-                  <li className="hover:text-black">About Us</li>
-                  <li className="hover:text-black">Projects</li>
-                  <li className="hover:text-black">Contact Us</li>
+                  <motion.li initial={{y:30,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.9,ease:"linear",type:"spring"}} className="text-black">Home</motion.li>
+                  <motion.li initial={{y:50,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.9,ease:"linear",type:"spring"}}  className="hover:text-black">About Us</motion.li>
+                  <motion.li initial={{y:70,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.9,ease:"linear",type:"spring"}}  className="hover:text-black">Projects</motion.li>
+                  <motion.li initial={{y:100,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.9,ease:"linear",type:"spring"}}  className="hover:text-black">Contact Us</motion.li>
                 </div>
               </div>
 
@@ -85,7 +85,7 @@ const Header = () => {
                   <img className="h-[15px]" src="/icon.svg" alt="" />
                   External
                 </div>
-                <div className="line h-[1px] bg-gray-100 "></div>
+                <motion.div initial={{width:"0"}} whileInView={{width:"100%"}} transition={{duration:1}} className="line h-[1px] bg-gray-100 "></motion.div>
                 <div className="link list-none Helvetica-Lt text-[26px] leading-[1.3] my-6">
                   <li className="hover:text-black flex">Meskerade NFT Drop <IoIosArrowRoundForward className="rotate-[-25deg] text-4xl"/></li>
                   <li className="hover:text-black flex">Mesh <IoIosArrowRoundForward className="rotate-[-25deg] text-4xl"/></li>
@@ -103,7 +103,7 @@ const Header = () => {
                   <img className="h-[15px]" src="/icon.svg" alt="" />
                  Contact
                 </div>
-                <div className="line h-[1px] bg-gray-100 "></div>
+                <motion.div initial={{width:"0"}} whileInView={{width:"100%"}} transition={{duration:1}} className="line h-[1px] bg-gray-100 "></motion.div>
                 <div className="link list-none Helvetica-Lt text-[22px] leading-[1.3] my-6">
                   <li className="flex flex-col"><span>Milan, IT</span> <span>—Via Lecco 18, 20124,</span><span>+39 342 5126242</span></li>
                   <li className="flex gap-3"><FaFacebook /><FaInstagram /><FaLinkedin /></li>
